@@ -5,7 +5,7 @@ from Counter import Counter
 
 class Executor():
     def run_executor(json_string, executor_class):
-        executor = executor_class(max_workers=2)
+        executor = executor_class()
         start_time_thread = time.time()
         fututres_1 = executor.submit(Counter.counting,
                                      json_string=json_string,
