@@ -15,10 +15,10 @@ class Executor():
                                      json_string=json_string,
                                      start_value=int(len(json_string['questions']) / 2),
                                      end_value=len(json_string['questions']))
-
+        spent_time = time.time() - start_time_thread
         result = fututres_2.result() + fututres_1.result()
         print("Results:{result}. Executor:{executor}. Time:{spent_time}".format(
             result=result,
             executor=executor_class.__name__,
-            spent_time=time.time() - start_time_thread
+            spent_time=spent_time
         ))
