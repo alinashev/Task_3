@@ -5,7 +5,7 @@ from Reader import Reader
 
 
 def main():
-    reader = Reader('res/osmi.json')
+    reader = Reader()
     Executor.run_executor(reader.get_json(), ThreadPoolExecutor)
 
 

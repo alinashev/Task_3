@@ -2,11 +2,10 @@ import json
 
 
 class Reader:
-    def __init__(self, path):
-        self.path = path
+    __path = 'res/osmi.json'
 
     def open_json_file(self):
-        with open(self.path, 'r', encoding='utf-8') as f:
+        with open(self.__path, 'r', encoding='utf-8') as f:
             self.text = json.load(f)
         return self.text
 
